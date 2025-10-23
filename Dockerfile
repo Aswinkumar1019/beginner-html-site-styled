@@ -1,5 +1,5 @@
 FROM ubuntu
 RUN apt-get update
-RUN apt install apache -y
+RUN apt install apache2 -y
 ADD . /var/www/html/
-ENTRYPOINT apachectl -D FOREGROUND
+ENTRYPOINT apache2ctl -D FOREGROUND
